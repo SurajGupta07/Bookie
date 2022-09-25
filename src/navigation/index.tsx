@@ -1,11 +1,14 @@
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import React, {FC} from 'react';
-import {AppTabs} from './BottomTabs';
+import {AppTabs} from './bottomTabs';
+import {AuthStack} from './authStack';
 
 export const MainNavigator = () => {
+  const isUserLoggedIn = true;
+
   return (
     <NavigationContainer>
-      <AppTabs />
+      {isUserLoggedIn ? <AppTabs /> : <AuthStack />}
     </NavigationContainer>
   );
 };
