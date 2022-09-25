@@ -1,12 +1,9 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import {MainNavigator} from './navigation';
 
 const App = () => {
-  return (
-    <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Bookie</Text>
-    </View>
-  );
+  return <MainNavigator />;
 };
 
 const styles = StyleSheet.create({
