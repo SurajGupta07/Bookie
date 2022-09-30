@@ -26,6 +26,9 @@ export const ProfileStack: FC = () => {
   );
 };
 
+//This Stack will be later use for other routes
+
+/*
 export const AppStack: FC = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
@@ -34,3 +37,4 @@ export const AppStack: FC = () => {
     </Stack.Navigator>
   );
 };
+*/
