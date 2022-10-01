@@ -1,5 +1,5 @@
-import { RootState } from "../../store";
+import {RootState} from '../../store';
 
+export const getProfileMessage = (state: RootState) => state.profile.message;
 
-export const selectMessage = (state: RootState) => state.profile.message;
-export const selectStatus = (state: RootState) => state.profile.status;
+export const getProfileStatus = (state: RootState) => state.profile.status;
