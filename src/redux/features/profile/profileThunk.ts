@@ -1,15 +1,9 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import {createAsyncThunk} from '@reduxjs/toolkit';
+import END_POINTS from '../../../utils/endpoint';
+import {IResponse} from './types';
 
-export interface TResponse  {
-    message: string,
-    status: string,
-}
-
-export const getUserAsync = createAsyncThunk(
-    'profile/getUser',
-   async () => {
-       const response = await fetch('https://dog.ceo/api/breeds/image/random');
-       const data: Promise<TResponse> = await response.json();
-       return (await data).message;
-   }
-);
+export const getUserAsync = createAsyncThunk('profile/getUser', async () => {
+  const response = await fetch(END_POINTS.getRandomDogs);
+  const data: Promise<IResponse> = await response.json();
+  return data;
+});

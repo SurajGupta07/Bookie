@@ -1,35 +1,36 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { getUserAsync } from "./profileThunk";
+import {createSlice} from '@reduxjs/toolkit';
+import {getUserAsync} from './profileThunk';
+import {APPSTATES} from '../../../types/enums';
 
 const initialState = {
-    message: 'I am Profile slice',
-    status: 'idle',
-}
+  message: 'Profile slice example',
+  status: APPSTATES.IDLE,
+};
 
 const profileSlice = createSlice({
-    name: 'profile',
-    initialState,
-    reducers: {
-        setMessage: (state, action) => {
-            state.message = action.payload;
-        }
+  name: 'profile',
+  initialState,
+  reducers: {
+    setMessage: (state, action) => {
+      state.message = action.payload;
     },
+  },
 
-    extraReducers: (builder) => {
-        builder
-            .addCase(getUserAsync.pending, (state) => {
-                state.status = 'loading';
-            })
-            .addCase(getUserAsync.fulfilled, (state, action) => {
-                state.status = 'idle';
-                state.message = action.payload;
-            })
-            .addCase(getUserAsync.rejected, (state) => {
-                state.status = 'error';
-            })
-    },
+  extraReducers: builder => {
+    builder
+      .addCase(getUserAsync.pending, state => {
+        state.status = APPSTATES.LOADING;
+      })
+      .addCase(getUserAsync.fulfilled, (state, action) => {
+        state.status = APPSTATES.IDLE;
+        state.message = action.payload.message;
+      })
+      .addCase(getUserAsync.rejected, state => {
+        state.status = APPSTATES.ERROR;
+      });
+  },
 });
 
-export const { setMessage } = profileSlice.actions;
+export const {setMessage} = profileSlice.actions;
 
 export default profileSlice.reducer;

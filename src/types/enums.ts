@@ -7,4 +7,10 @@ enum APPROUTES {
   profile = 'Profile',
 }
 
-export {APPROUTES};
+enum APPSTATES {
+  IDLE = 'idle',
+  LOADING = 'loading',
+  ERROR = 'error',
+}
+
+export {APPROUTES, APPSTATES};

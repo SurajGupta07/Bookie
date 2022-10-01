@@ -12,8 +12,16 @@ const Stack = createNativeStackNavigator<NavigationParams>();
 export const HomeStack: FC = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name={APPROUTES.home} component={Home} />
-      <Stack.Screen name={APPROUTES.details} component={Details} />
+      <Stack.Screen
+        name={APPROUTES.home}
+        component={Home}
+        options={{animation: 'slide_from_right'}}
+      />
+      <Stack.Screen
+        name={APPROUTES.details}
+        component={Details}
+        options={{animation: 'slide_from_right'}}
+      />
     </Stack.Navigator>
   );
 };
@@ -25,16 +33,3 @@ export const ProfileStack: FC = () => {
     </Stack.Navigator>
   );
 };
-
-//This Stack will be later use for other routes
-
-/*
-export const AppStack: FC = () => {
-  return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name={APPROUTES.homeStack} component={HomeStack} />
-      <Stack.Screen name={APPROUTES.profileStack} component={ProfileStack} />
-    </Stack.Navigator>
-  );
-};
-*/
