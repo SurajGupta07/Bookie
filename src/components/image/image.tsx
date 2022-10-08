@@ -1,17 +1,30 @@
 // Render svg as an Image component
 
 import React from 'react';
+import {Image} from 'react-native';
+
 import dimensions from '../../utils/dimensions';
 import {IImage} from './types';
 
 export const AImage: React.FC<IImage> = ({
-  image: Image,
+  image: RenderImage,
   imageHeight,
   imageWidth,
   fill,
-  url,
+  imageUrl,
 }) => {
-  imageWidth = imageWidth ?? dimensions.viewWidth(21);
-  imageHeight = imageHeight ?? dimensions.viewHeight(21);
-  return <Image width={imageWidth} height={imageHeight} fill={fill} />;
+  imageWidth = imageWidth ?? dimensions.viewWidth(22);
+  imageHeight = imageHeight ?? dimensions.viewHeight(22);
+  if (imageUrl) {
+    return (
+      <Image
+        source={{
+          uri: imageUrl,
+          width: imageWidth,
+          height: imageWidth,
+        }}
+      />
+    );
+  }
+  return <RenderImage width={imageWidth} height={imageHeight} fill={fill} />;
 };

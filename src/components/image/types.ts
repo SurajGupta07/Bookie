@@ -3,5 +3,5 @@ export interface IImage {
   imageHeight?: number;
   imageWidth?: number;
   fill?: string;
-  url?: string;
+  imageUrl?: string;
 }
