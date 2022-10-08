@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Image, Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {
@@ -11,6 +11,8 @@ import {getUserAsync} from '../../redux/features/profile/profileThunk';
 import {AppDispatch} from '../../redux/store';
 import {APPSTATES} from '../../types/enums';
 import {styles} from './style';
+import {AImage} from '../../components/image/image';
+import dimensions from '../../utils/dimensions';
 
 export const Profile: React.FC = () => {
   const message = useSelector(getProfileMessage);
@@ -33,12 +35,11 @@ export const Profile: React.FC = () => {
       {status === APPSTATES.LOADING ? (
         <Text>Loading</Text>
       ) : (
-        <Image
-          source={{
-            uri: message,
-            width: 200,
-            height: 200,
-          }}
+        <AImage
+          image={null}
+          imageUrl={message}
+          imageHeight={dimensions.viewHeight(200)}
+          imageWidth={dimensions.viewWidth(200)}
         />
       )}
     </View>
