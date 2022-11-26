@@ -14,9 +14,18 @@ export interface ITypography {
     title: number;
     hero: number;
   };
+
+  fontFamily: {
+    '100': string;
+    '300': string;
+    '400': string;
+    '500': string;
+    '700': string;
+    '900': string;
+  }
 }
 
-export const fontSize = {
+const fontSize = {
   tiny: Number(RFValue(10, baseHeight).toFixed(2)),
   small: Number(RFValue(12, baseHeight).toFixed(2)),
   normal: Number(RFValue(14, baseHeight).toFixed(2)),
@@ -27,6 +36,16 @@ export const fontSize = {
   hero: Number(RFValue(40, baseHeight).toFixed(2)),
 };
 
+const fontFamily = {
+  '100': "Roboto-Thin",
+  '300': "Roboto-Light",
+  '400': "Roboto-Regular",
+  '500': "Roboto-Medium",
+  '700': "Roboto-Bold",
+  '900': "Roboto-Black",
+};
+
 export const typography: ITypography = {
   fontSize,
+  fontFamily
 };
