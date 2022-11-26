@@ -9,6 +9,6 @@ export const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: theme.typography.fontSize.title,
-    fontWeight: '600',
+    fontFamily: theme.typography.fontFamily[500],
   },
 });

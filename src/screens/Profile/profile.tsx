@@ -35,12 +35,14 @@ export const Profile: React.FC = () => {
       {status === APPSTATES.LOADING ? (
         <Text>Loading</Text>
       ) : (
-        <AImage
-          image={null}
-          imageUrl={message}
-          imageHeight={dimensions.viewHeight(200)}
-          imageWidth={dimensions.viewWidth(200)}
-        />
+        message && (
+          <AImage
+            image={null}
+            imageUrl={message}
+            imageHeight={dimensions.viewHeight(200)}
+            imageWidth={dimensions.viewWidth(200)}
+          />
+        )
       )}
     </View>
   );
