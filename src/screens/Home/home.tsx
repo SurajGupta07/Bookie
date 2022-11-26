@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {THome} from './types';
 import {styles} from './style';
-import {APPROUTES} from '../../types/enums';
+import {APPROUTES, LANGUAGES} from '../../types/enums';
 import {API_URL} from '@env';
 import {APP_IMAGES} from '../../utils/imageMapper';
 import {AImage} from '../../components/image/image';
@@ -17,18 +17,18 @@ export const Home: React.FC<THome> = ({navigation}) => {
   const dispatch = useDispatch<AppDispatch>();
   const language = useSelector(getLanguage);
 
-  const disptachSetLanguage = (selectedLanguage: string) => {
+  const disptachSetLanguage = (selectedLanguage: LANGUAGES) => {
     dispatch(setLanguage(selectedLanguage));
   };
 
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Home {'Testing eslint'}</Text>
+      <Text style={styles.sectionTitle}>{language.homeScreen.home}</Text>
       <Text>
         {language.homeScreen.env} {'->'} {API_URL}
       </Text>
       <Button
-        title="Go to details"
+        title={language.homeScreen.details}
         onPress={() => navigation.navigate(APPROUTES.details)}
       />
       <AImage
@@ -38,11 +38,11 @@ export const Home: React.FC<THome> = ({navigation}) => {
       />
       <Button
         title="Set Language as Hindi"
-        onPress={() => disptachSetLanguage('Hindi')}
+        onPress={() => disptachSetLanguage(LANGUAGES.HINDI)}
       />
       <Button
         title="Set Language as English"
-        onPress={() => disptachSetLanguage('English')}
+        onPress={() => disptachSetLanguage(LANGUAGES.ENGLISH)}
       />
     </View>
   );

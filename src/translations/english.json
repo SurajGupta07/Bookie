@@ -1,6 +1,7 @@
 {
   "homeScreen": {
     "home": "Home!!",
-    "env": "env example"
+    "env": "env example",
+    "details": "Go to details"
   }
 }
