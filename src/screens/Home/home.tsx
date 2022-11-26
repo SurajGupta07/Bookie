@@ -10,8 +10,6 @@ import {AImage} from '../../components/image/image';
 import dimensions from '../../utils/dimensions';
 
 export const Home: React.FC<THome> = ({navigation}) => {
-  console.log('testing semicolon');
-
   return (
     <View style={styles.sectionContainer}>
       <Text style={styles.sectionTitle}>Home {'Testing eslint'}</Text>
