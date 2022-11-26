@@ -12,7 +12,7 @@ import dimensions from '../../utils/dimensions';
 export const Home: React.FC<THome> = ({navigation}) => {
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Home</Text>
+      <Text style={styles.sectionTitle}>Home {'Testing eslint'}</Text>
       <Text>
         env example {'->'} {API_URL}
       </Text>
