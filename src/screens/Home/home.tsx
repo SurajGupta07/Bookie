@@ -23,7 +23,7 @@ export const Home: React.FC<THome> = ({navigation}) => {
 
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>{language.homeScreen.home}</Text>
+      <Text style={styles.sectionTitle}>Home {'Testing eslint'}</Text>
       <Text>
         {language.homeScreen.env} {'->'} {API_URL}
       </Text>
