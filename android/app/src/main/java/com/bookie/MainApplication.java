@@ -2,6 +2,9 @@ package com.bookie;
 
 import android.app.Application;
 import android.content.Context;
+import android.view.WindowManager;
+import android.content.res.Configuration;
+import android.util.DisplayMetrics;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -52,10 +55,25 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    //Call to adjust font scaling
+    adjustFontScale(getApplicationContext(),getResources().getConfiguration());
+
     // If you opted-in for the New Architecture, we enable the TurboModule system
     ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+  }
+
+  // To disable font scaling in the app
+  public void adjustFontScale(Context context, Configuration configuration) {
+    if (configuration.fontScale != 1) {
+        configuration.fontScale = 1;
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(metrics);
+        metrics.scaledDensity = configuration.fontScale * metrics.density;
+        context.getResources().updateConfiguration(configuration, metrics);
+    }
   }
 
   /**

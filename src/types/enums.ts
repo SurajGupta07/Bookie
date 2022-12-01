@@ -13,4 +13,9 @@ enum APPSTATES {
   ERROR = 'error',
 }
 
-export {APPROUTES, APPSTATES};
+enum LANGUAGES {
+  ENGLISH = 'English',
+  HINDI = 'Hindi',
+}
+
+export {APPROUTES, APPSTATES, LANGUAGES};
