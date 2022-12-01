@@ -11,8 +11,8 @@ import {getUserAsync} from '../../redux/features/profile/profileThunk';
 import {AppDispatch} from '../../redux/store';
 import {APPSTATES} from '../../types/enums';
 import {styles} from './style';
-import {ImageRenderer} from '../../components/image/image';
 import dimensions from '../../utils/dimensions';
+import {ImageRenderer} from '../../components';
 
 export const Profile: React.FC = () => {
   const message = useSelector(getProfileMessage);

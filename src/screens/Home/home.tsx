@@ -7,11 +7,11 @@ import {styles} from './style';
 import {APPROUTES, LANGUAGES} from '../../types/enums';
 import {API_URL} from '@env';
 import {APP_IMAGES} from '../../utils/imageMapper';
-import {ImageRenderer} from '../../components/image/image';
 import dimensions from '../../utils/dimensions';
 import {AppDispatch} from '../../redux/store';
 import {getLanguage} from '../../redux/features/language/languageSelectors';
 import {setLanguage} from '../../redux/features/language/languageSlice';
+import {ImageRenderer} from '../../components';
 
 export const Home: React.FC<THome> = ({navigation}) => {
   const dispatch = useDispatch<AppDispatch>();

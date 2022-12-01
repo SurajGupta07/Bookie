@@ -7,7 +7,7 @@ import dimensions from '../../utils/dimensions';
 import {styles} from './styles';
 import {TIcon} from './types';
 
-const Icon: React.FC<TIcon> = ({
+export const Icon: React.FC<TIcon> = ({
   children,
   size = dimensions.viewWidth(30),
   style = {},
@@ -28,5 +28,3 @@ const Icon: React.FC<TIcon> = ({
     </Pressable>
   );
 };
-
-export default Icon;

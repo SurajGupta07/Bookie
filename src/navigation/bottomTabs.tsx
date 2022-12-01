@@ -5,8 +5,8 @@ import {APPROUTES} from '../types/enums';
 import {NavigationParams} from '../types/types';
 import {HomeStack, ProfileStack} from './appStack';
 import {APP_IMAGES} from '../utils/imageMapper';
-import {ImageRenderer} from '../components/image/image';
 import dimensions from '../utils/dimensions';
+import {ImageRenderer} from '../components';
 
 const Tab = createBottomTabNavigator<NavigationParams>();
 
