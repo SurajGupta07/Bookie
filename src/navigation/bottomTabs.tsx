@@ -5,7 +5,7 @@ import {APPROUTES} from '../types/enums';
 import {NavigationParams} from '../types/types';
 import {HomeStack, ProfileStack} from './appStack';
 import {APP_IMAGES} from '../utils/imageMapper';
-import {AImage} from '../components/image/image';
+import {ImageRenderer} from '../components/image/image';
 import dimensions from '../utils/dimensions';
 
 const Tab = createBottomTabNavigator<NavigationParams>();
@@ -19,10 +19,10 @@ export const AppTabs: FC = () => {
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({color, size}) => (
-            <AImage
-              image={APP_IMAGES.home}
-              imageWidth={dimensions.viewWidth(35)}
-              imageHeight={dimensions.viewWidth(35)}
+            <ImageRenderer
+              assetSrc={APP_IMAGES.home}
+              width={dimensions.viewWidth(35)}
+              height={dimensions.viewWidth(35)}
             />
           ),
         }}
@@ -33,10 +33,10 @@ export const AppTabs: FC = () => {
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({color, size}) => (
-            <AImage
-              image={APP_IMAGES.profile}
-              imageWidth={dimensions.viewWidth(35)}
-              imageHeight={dimensions.viewWidth(35)}
+            <ImageRenderer
+              assetSrc={APP_IMAGES.profile}
+              width={dimensions.viewWidth(35)}
+              height={dimensions.viewWidth(35)}
             />
           ),
         }}

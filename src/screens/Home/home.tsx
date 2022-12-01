@@ -7,7 +7,7 @@ import {styles} from './style';
 import {APPROUTES, LANGUAGES} from '../../types/enums';
 import {API_URL} from '@env';
 import {APP_IMAGES} from '../../utils/imageMapper';
-import {AImage} from '../../components/image/image';
+import {ImageRenderer} from '../../components/image/image';
 import dimensions from '../../utils/dimensions';
 import {AppDispatch} from '../../redux/store';
 import {getLanguage} from '../../redux/features/language/languageSelectors';
@@ -31,10 +31,10 @@ export const Home: React.FC<THome> = ({navigation}) => {
         title={language.homeScreen.details}
         onPress={() => navigation.navigate(APPROUTES.details)}
       />
-      <AImage
-        image={APP_IMAGES.booking}
-        imageWidth={dimensions.viewWidth(200)}
-        imageHeight={dimensions.viewWidth(200)}
+      <ImageRenderer
+        assetSrc={APP_IMAGES.booking}
+        width={dimensions.viewWidth(200)}
+        height={dimensions.viewWidth(200)}
       />
       <Button
         title="Set Language as Hindi"

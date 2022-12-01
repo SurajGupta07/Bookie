@@ -1,7 +1,7 @@
 export interface IImage {
-  image: any;
-  imageHeight?: number;
-  imageWidth?: number;
+  assetSrc: any;
+  width?: number;
+  height?: number;
   fill?: string;
-  imageUrl?: string;
+  url?: string;
 }

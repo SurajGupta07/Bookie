@@ -11,7 +11,7 @@ import {getUserAsync} from '../../redux/features/profile/profileThunk';
 import {AppDispatch} from '../../redux/store';
 import {APPSTATES} from '../../types/enums';
 import {styles} from './style';
-import {AImage} from '../../components/image/image';
+import {ImageRenderer} from '../../components/image/image';
 import dimensions from '../../utils/dimensions';
 
 export const Profile: React.FC = () => {
@@ -36,11 +36,11 @@ export const Profile: React.FC = () => {
         <Text>Loading</Text>
       ) : (
         message && (
-          <AImage
-            image={null}
-            imageUrl={message}
-            imageHeight={dimensions.viewHeight(200)}
-            imageWidth={dimensions.viewWidth(200)}
+          <ImageRenderer
+            assetSrc={null}
+            url={message}
+            height={dimensions.viewHeight(200)}
+            width={dimensions.viewWidth(200)}
           />
         )
       )}
