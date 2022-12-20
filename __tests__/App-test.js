@@ -1,10 +1,10 @@
-import 'react-native';
-import * as React from 'react';
-import renderer from 'react-test-renderer';
-import {Home} from '../src/screens/Home/home';
+import "react-native";
+import React from "react";
+import renderer from "react-test-renderer";
+import {Home} from "../src/screens/Home/home";
 
-describe('App test', () => {
-  it(`Test for App Screen`, () => {
+describe("MyComponent", () => {
+  it("renders correctly", () => {
     const tree = renderer.create(<Home />).toJSON();
     expect(tree).toMatchSnapshot();
   });
