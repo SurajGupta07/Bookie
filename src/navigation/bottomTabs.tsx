@@ -1,12 +1,12 @@
-import React, {FC} from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React, {FC} from "react";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 
-import {APPROUTES} from '../types/enums';
-import {NavigationParams} from '../types/types';
-import {HomeStack, ProfileStack} from './appStack';
-import {APP_IMAGES} from '../utils/imageMapper';
-import dimensions from '../utils/dimensions';
-import {ImageRenderer} from '../components';
+import {APPROUTES} from "../types/enums";
+import {NavigationParams} from "../types/types";
+import {HomeStack, ProfileStack} from "./appStack";
+import {APP_IMAGES} from "../utils/imageMapper";
+import dimensions from "../utils/dimensions";
+import {ImageRenderer} from "../components";
 
 const Tab = createBottomTabNavigator<NavigationParams>();
 

@@ -1,15 +1,15 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {ILanguageState} from './types';
-import English from '../../../translations/english.json';
-import Hindi from '../../../translations/hindi.json';
-import {LANGUAGES} from '../../../types/enums';
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {ILanguageState} from "./types";
+import English from "../../../translations/english.json";
+import Hindi from "../../../translations/hindi.json";
+import {LANGUAGES} from "../../../types/enums";
 
 const initialState: ILanguageState = {
   selectedLanguage: English,
 };
 
 const languageSlice = createSlice({
-  name: 'language',
+  name: "language",
   initialState,
   reducers: {
     setLanguage(state, action: PayloadAction<LANGUAGES>) {

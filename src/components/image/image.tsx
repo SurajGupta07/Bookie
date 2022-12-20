@@ -1,10 +1,10 @@
 // Render svg as an Image component
 
-import React from 'react';
-import {Image} from 'react-native';
+import React from "react";
+import {Image} from "react-native";
 
-import dimensions from '../../utils/dimensions';
-import {IImage} from './types';
+import dimensions from "../../utils/dimensions";
+import {IImage} from "./types";
 
 export const ImageRenderer: React.FC<IImage> = ({
   assetSrc: RenderImage,

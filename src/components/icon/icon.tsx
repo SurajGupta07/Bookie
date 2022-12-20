@@ -1,11 +1,11 @@
 // Icon Component for Touchable Area
 
-import React from 'react';
-import {Pressable} from 'react-native';
+import React from "react";
+import {Pressable} from "react-native";
 
-import dimensions from '../../utils/dimensions';
-import {styles} from './styles';
-import {TIcon} from './types';
+import dimensions from "../../utils/dimensions";
+import {styles} from "./styles";
+import {TIcon} from "./types";
 
 export const Icon: React.FC<TIcon> = ({
   children,
