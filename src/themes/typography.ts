@@ -22,7 +22,7 @@ export interface ITypography {
     '500': string;
     '700': string;
     '900': string;
-  }
+  };
 }
 
 const fontSize = {
@@ -37,15 +37,15 @@ const fontSize = {
 };
 
 const fontFamily = {
-  '100': "Roboto-Thin",
-  '300': "Roboto-Light",
-  '400': "Roboto-Regular",
-  '500': "Roboto-Medium",
-  '700': "Roboto-Bold",
-  '900': "Roboto-Black",
+  '100': 'Roboto-Thin',
+  '300': 'Roboto-Light',
+  '400': 'Roboto-Regular',
+  '500': 'Roboto-Medium',
+  '700': 'Roboto-Bold',
+  '900': 'Roboto-Black',
 };
 
 export const typography: ITypography = {
   fontSize,
-  fontFamily
+  fontFamily,
 };
