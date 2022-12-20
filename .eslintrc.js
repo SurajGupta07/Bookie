@@ -5,22 +5,22 @@ module.exports = {
     jest: true,
   },
   root: true,
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ["eslint:recommended", "prettier"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: "module",
   },
-  plugins: ['react'],
+  plugins: ["react"],
   rules: {
     quotes: [
-      'warn',
-      'double',
+      "warn",
+      "double",
       {avoidEscape: true, allowTemplateLiterals: false},
     ],
-    'no-unused-vars': ['warn', {vars: 'all', args: 'all'}],
-    semi: ['warn', 'always'],
+    "no-unused-vars": ["warn", {vars: "all", args: "all"}],
+    semi: ["warn", "always"],
   },
 };
