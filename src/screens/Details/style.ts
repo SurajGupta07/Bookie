@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {theme} from '../../../themes';
+import {theme} from '../../themes';
 
 export const styles = StyleSheet.create({
   sectionContainer: {
@@ -9,6 +9,6 @@ export const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: theme.typography.fontSize.title,
-    fontWeight: '600',
+    fontFamily: theme.typography.fontFamily[500],
   },
 });

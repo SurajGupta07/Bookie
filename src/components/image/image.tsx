@@ -6,25 +6,25 @@ import {Image} from 'react-native';
 import dimensions from '../../utils/dimensions';
 import {IImage} from './types';
 
-export const AImage: React.FC<IImage> = ({
-  image: RenderImage,
-  imageHeight,
-  imageWidth,
+export const ImageRenderer: React.FC<IImage> = ({
+  assetSrc: RenderImage,
+  width,
+  height,
   fill,
-  imageUrl,
+  url,
 }) => {
-  imageWidth = imageWidth ?? dimensions.viewWidth(22);
-  imageHeight = imageHeight ?? dimensions.viewHeight(22);
-  if (imageUrl) {
+  width = width ?? dimensions.viewWidth(22);
+  height = height ?? dimensions.viewHeight(22);
+  if (url) {
     return (
       <Image
         source={{
-          uri: imageUrl,
-          width: imageWidth,
-          height: imageWidth,
+          uri: url,
+          width: width,
+          height: height,
         }}
       />
     );
   }
-  return <RenderImage width={imageWidth} height={imageHeight} fill={fill} />;
+  return <RenderImage width={width} height={height} fill={fill} />;
 };
