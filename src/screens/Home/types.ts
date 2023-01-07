@@ -1,4 +1,4 @@
-import { NavigationProp } from "@react-navigation/native";
+import {NavigationProp} from "@react-navigation/native";
 
 export type NavigationParams = {
   Home: undefined;
@@ -9,5 +9,5 @@ export type NavigationParams = {
 };
 
 export type THome = {
-    navigation: NavigationProp<NavigationParams>;
-}
+  navigation: NavigationProp<NavigationParams>;
+};

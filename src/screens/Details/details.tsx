@@ -1,6 +1,6 @@
-import React from 'react';
-import {Text, View} from 'react-native';
-import {styles} from './style';
+import React from "react";
+import {Text, View} from "react-native";
+import {styles} from "./style";
 
 export const Details = () => {
   return (

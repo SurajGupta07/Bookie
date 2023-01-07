@@ -1,4 +1,4 @@
-import {RootState} from '../../store';
+import {RootState} from "../../store";
 
 export const getProfileMessage = (state: RootState) => state.profile.message;
 

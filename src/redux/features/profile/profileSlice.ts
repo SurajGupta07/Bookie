@@ -1,14 +1,14 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {getUserAsync} from './profileThunk';
-import {APPSTATES} from '../../../types/enums';
+import {createSlice} from "@reduxjs/toolkit";
+import {getUserAsync} from "./profileThunk";
+import {APPSTATES} from "../../../types/enums";
 
 const initialState = {
-  message: 'Profile slice example',
+  message: "Profile slice example",
   status: APPSTATES.IDLE,
 };
 
 const profileSlice = createSlice({
-  name: 'profile',
+  name: "profile",
   initialState,
   reducers: {
     setMessage: (state, action) => {

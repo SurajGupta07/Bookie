@@ -1,4 +1,4 @@
-import {APPROUTES} from './enums';
+import {APPROUTES} from "./enums";
 
 export type NavigationParams = {
   [APPROUTES.login]: undefined;

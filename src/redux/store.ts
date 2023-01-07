@@ -1,6 +1,6 @@
-import {Action, configureStore, ThunkAction} from '@reduxjs/toolkit';
-import profileReducer from './features/profile/profileSlice';
-import languageReducer from './features/language/languageSlice';
+import {Action, configureStore, ThunkAction} from "@reduxjs/toolkit";
+import profileReducer from "./features/profile/profileSlice";
+import languageReducer from "./features/language/languageSlice";
 
 export const store = configureStore({
   reducer: {

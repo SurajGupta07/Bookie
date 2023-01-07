@@ -1,6 +1,6 @@
-import React from 'react';
-import {Text} from 'react-native';
-import {MainNavigator} from './navigation';
+import React from "react";
+import {Text} from "react-native";
+import {MainNavigator} from "./navigation";
 
 //To disable App font scaling
 interface TextWithDefaultProps extends Text {

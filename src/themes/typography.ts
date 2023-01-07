@@ -1,5 +1,5 @@
-import {RFValue} from 'react-native-responsive-fontsize';
-import dimensions from '../utils/dimensions';
+import {RFValue} from "react-native-responsive-fontsize";
+import dimensions from "../utils/dimensions";
 
 const baseHeight = dimensions.screenHeight;
 
@@ -16,12 +16,12 @@ export interface ITypography {
   };
 
   fontFamily: {
-    '100': string;
-    '300': string;
-    '400': string;
-    '500': string;
-    '700': string;
-    '900': string;
+    "100": string;
+    "300": string;
+    "400": string;
+    "500": string;
+    "700": string;
+    "900": string;
   };
 }
 
@@ -37,12 +37,12 @@ const fontSize = {
 };
 
 const fontFamily = {
-  '100': 'Roboto-Thin',
-  '300': 'Roboto-Light',
-  '400': 'Roboto-Regular',
-  '500': 'Roboto-Medium',
-  '700': 'Roboto-Bold',
-  '900': 'Roboto-Black',
+  "100": "Roboto-Thin",
+  "300": "Roboto-Light",
+  "400": "Roboto-Regular",
+  "500": "Roboto-Medium",
+  "700": "Roboto-Bold",
+  "900": "Roboto-Black",
 };
 
 export const typography: ITypography = {
