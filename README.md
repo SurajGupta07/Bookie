@@ -22,5 +22,5 @@
 - 📝 :pencil: [Minor] Some small updates
 
 - Every feature will have one branch specific to it and all PRs will be merged to a feature branch.
-- Feature branch will be merged to ```develop``` only after feature working as per expectations.
-- ```develop``` branch will be later merged to ```master``` upon testing and code reviews.
+- Feature branch will be merged to `develop` only after feature working as per expectations.
+- `develop` branch will be later merged to `master` upon testing and code reviews.

@@ -9,6 +9,6 @@ export const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: theme.typography.fontSize.title,
-    fontFamily: theme.typography.fontFamily[500]
+    fontFamily: theme.typography.fontFamily[500],
   },
 });
